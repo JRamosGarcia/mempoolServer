@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "bitcoind.user",
+    "type": "java.lang.String",
+    "description": "A description for 'bitcoind.user'"
+  },
+  {
+    "name": "bitcoind.password",
+    "type": "java.lang.String",
+    "description": "A description for 'bitcoind.password'"
+  },
+  {
+    "name": "bitcoind.port",
+    "type": "java.lang.String",
+    "description": "A description for 'bitcoind.port'"
+  },
+  {
+    "name": "bitcoind.host",
+    "type": "java.lang.String",
+    "description": "A description for 'bitcoind.host'"
+  }
+]}
