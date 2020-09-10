@@ -16,8 +16,8 @@ public class GetMemPoolInfoData {
 							// actual serialized size because witness data is discounted
 	private Integer usage; // Total memory usage for the mempool in bytes
 	private Integer maxmempool; // Maximum memory usage for the mempool in bytes
-	private Integer mempoolminfee; // Minimum fee rate in BTC/kB for tx to be accepted. Is the maximum of
+	private Double mempoolminfee; // Minimum fee rate in BTC/kB for tx to be accepted. Is the maximum of
 									// minrelaytxfee and minimum mempool fee
-	private Integer minrelaytxfee; // Current minimum relay fee for transaction
+	private Double minrelaytxfee; // Current minimum relay fee for transaction
 
 }

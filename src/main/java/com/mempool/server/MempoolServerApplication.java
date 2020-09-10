@@ -42,12 +42,17 @@ public class MempoolServerApplication {
 	}
 
 	@Bean
-	public RestTemplate getBitcoindClient(RestTemplateBuilder restTemplateBuilder)
+	public RestTemplate bitcoindClient(RestTemplateBuilder restTemplateBuilder)
 			throws NumberFormatException, URISyntaxException {
 		return restTemplateBuilder.basicAuthentication(bitcoindProperties.getUser(), bitcoindProperties.getPassword())
 				.additionalMessageConverters(new MappingJackson2HttpMessageConverter())
 				.rootUri(UriComponentsBuilder.newInstance().scheme("http").host(bitcoindProperties.getHost())
 						.port(Integer.valueOf(bitcoindProperties.getRpcPort())).toUriString())
 				.errorHandler(new BitcoindClientResponseErrorHandler()).build();
+	}
+
+	@Bean
+	public RestTemplate rawTxSourceClient(RestTemplateBuilder restTemplateBuilder) {
+		return restTemplateBuilder.additionalMessageConverters(new MappingJackson2HttpMessageConverter()).build();
 	}
 }

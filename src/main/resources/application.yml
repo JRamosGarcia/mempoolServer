@@ -1,0 +1,8 @@
+bitcoind:
+  host: 192.168.3.2
+  rpcPort: 8332
+  user: anon
+  password: anon
+
+raw-tx-source:
+  url: http://localhost:8080/memPool/rawTxs
