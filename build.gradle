@@ -74,10 +74,18 @@ checkstyle {
         configFile = rootProject.file('./checkstyle.xml')
     }
 
+//Execute from command line: ./gradlew bootRun -Pargs=--spring.main.banner-mode=off,--customArgument=custom
 bootJar {
     baseName = 'mempoolServer'
     version =  '0.0.1-SNAPSHOT'
 }
+
+bootRun {
+    if (project.hasProperty('args')) {
+        args project.args.split(',')
+    }
+}
+
 /*// Recommended buy complicated
 task unpack(type: Copy) {
     dependsOn bootJar
