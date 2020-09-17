@@ -15,7 +15,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.mempool.server.components.clients.BitcoindClientResponseErrorHandler;
 import com.mempool.server.properties.BitcoindProperties;
-//kk
+
+
 @SpringBootApplication
 //@RefreshScope
 //@EnableFeignClients
