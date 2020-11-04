@@ -86,19 +86,18 @@ bootRun {
     }
 }
 
-/*// Recommended buy complicated
-task unpack(type: Copy) {
-    dependsOn bootJar
-    from(zipTree(tasks.bootJar.outputs.files.singleFile))
-    into("build/dependency")
-}
+// Recommended buy complicated
+//task unpack(type: Copy) {
+//    dependsOn bootJar
+//    from(zipTree(tasks.bootJar.outputs.files.singleFile))
+//    into("build/dependency")
+//}
 
-docker {
-    name "localhost:5000/mempoolServer:latest"
-    copySpec.from(tasks.unpack.outputs).into("dependency")
-    buildArgs(['DEPENDENCY': "dependency"])
-}
-*/
+//docker {
+//    name "localhost:5000/mempoolServer:latest"
+//    copySpec.from(tasks.unpack.outputs).into("dependency")
+//    buildArgs(['DEPENDENCY': "dependency"])
+//}
 
 //Easy way
 docker {
